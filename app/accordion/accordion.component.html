@@ -1,0 +1,25 @@
+<StackLayout>
+    <WrapLayout class="accordion" width="100%" orientation="horizontal" *ngFor="let vehicle of vehicles; let i = index" backgroundColor="">
+        <WrapLayout (tap)="changeState(collapsableState)" width="100%">
+            <Label class="title" width="35%" height="150px" [text]="vehicle.registration"></Label>
+            <Label class="description" width="35%" height="150px" [text]="vehicle.manufacturer+' '+vehicle.model"></Label>
+        </WrapLayout>
+        <Label #collapsableState [attr.state]="'inactive'" visibility="collapsed" width="0" height="0"></Label>
+        <GridLayout #collapsable visibility="visible" [@state]="collapsableState.state" width="100%" height="auto">
+            <GridLayout row="0" width="100%" columns="*,*,*" rows="{{getRowHeight()}}">
+                <StackLayout row="0" col="0" class="grid">
+                    <Label text ="Insurance" class="subtitle"></Label>
+					<Label text ="23-05-2020"class="subtitle-value"></Label>
+                </StackLayout>
+                <StackLayout row="0" col="1" class="grid">
+                    <Label text ="License" class="subtitle"></Label>
+                    <Label text ="15-09-2022"class="subtitle-value"></Label>
+                </StackLayout>
+                <StackLayout row="0" col="2" class="grid">
+				    <Label text ="Tax" class="subtitle"></Label>
+                    <Label text ="05-12-2019"class="subtitle-value"></Label>
+                </StackLayout>
+            </GridLayout>
+        </GridLayout>
+    </WrapLayout>
+</StackLayout>

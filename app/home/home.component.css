@@ -1,0 +1,23 @@
+.home-panel{
+    font-size: 20;
+    margin-top: 0;
+}
+
+.description-label{
+    margin: 15;
+    text-align: center;
+}
+
+.hr {
+    border-bottom-width: 1px;
+    border-color: rgb(200,200,200);
+    height: 1px;
+    margin:0;
+}
+
+.link {
+    font-size: 12;
+    color: rgb(0, 0, 255);
+    text-align: center;
+    vertical-align: center;
+}

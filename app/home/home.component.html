@@ -1,0 +1,14 @@
+<ActionBar title="Ez Accordion"> </ActionBar>
+
+<GridLayout rows="*,40">
+    <ScrollView row = "0">
+        <StackLayout class="home-panel">
+            <Label textWrap="true" text="A basic and easy to use animated Nativescript Angular accordion." class="h2 description-label"></Label>
+            <Label class ="hr"></Label>
+            <ns-ez-accordion></ns-ez-accordion>
+        </StackLayout>
+    </ScrollView>
+    <DockLayout row="1" width="100%">
+        <Label text="www.github.com/arnasdev/nativescript-ez-accordion" class="link" (tap)="openURL()"> </Label>
+    </DockLayout>
+</GridLayout>
