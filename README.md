@@ -12,7 +12,7 @@ Ez Accordion was made to be an easy to use animated NativeScript Angular accordi
 ## Preview app on device
 1. Install NativeScript Preview on your mobile device
 
-* [Click here (nativescript playground)] (https://play.nativescript.org/profile/projects?template=play-ng&id=nX27gj&v=7)
+* Go to https://play.nativescript.org/profile/projects?template=play-ng&id=nX27gj&v=7
 
 * Click preview and scan the QR code on your device
 
