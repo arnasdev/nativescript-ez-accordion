@@ -1,11 +1,11 @@
 <StackLayout>
-    <WrapLayout class="accordion" width="100%" orientation="horizontal" *ngFor="let vehicle of vehicles; let i = index" backgroundColor="">
-        <WrapLayout (tap)="changeState(collapsableState)" width="100%">
-            <Label class="title" width="35%" height="150px" [text]="vehicle.registration"></Label>
+	<WrapLayout class="accordion" width="100%" orientation="horizontal" *ngFor="let vehicle of vehicles; let i = index">
+		<WrapLayout (tap)="changeState(collapsableState)" width="100%">
+			<Label class="title" width="35%" height="150px" [text]="vehicle.registration"></Label>
             <Label class="description" width="35%" height="150px" [text]="vehicle.manufacturer+' '+vehicle.model"></Label>
         </WrapLayout>
         <Label #collapsableState [attr.state]="'inactive'" visibility="collapsed" width="0" height="0"></Label>
-        <GridLayout #collapsable visibility="visible" [@state]="collapsableState.state" width="100%" height="auto">
+        <GridLayout [@state]="collapsableState.state" width="100%" height="auto">
             <GridLayout row="0" width="100%" columns="*,*,*" rows="{{getRowHeight()}}">
                 <StackLayout row="0" col="0" class="grid">
                     <Label text ="Insurance" class="subtitle"></Label>
